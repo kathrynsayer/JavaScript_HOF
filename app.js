@@ -62,3 +62,31 @@ console.log(nameScore);
 // Exercise 4 Section
 console.log("EXERCISE 4:\n==========\n");
 
+let filteredUsers = users.filter((user) => user.isActive);
+
+console.log(filteredUsers);
+
+// Exercise 5 Section
+console.log("EXERCISE 5:\n==========\n");
+
+function sortDesc(userA, userB) {
+    if (userA.score < userB.score) {
+        return 1;
+    } else {
+        return -1;
+    }
+}
+
+users.sort(sortDesc);
+console.log(users);
+
+// Exercise 6 Section
+console.log("EXERCISE 6:\n==========\n");
+
+function reduceSum(sum, user) {
+    return sum + user.score;
+}
+
+let sumScores = users.reduce(reduceSum, 0);
+
+console.log(`Avg user score: ${sumScores / users.length}`);
